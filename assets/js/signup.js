@@ -10,6 +10,23 @@ let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = false
 
+let telefone = document.querySelector('#telefone')
+let labeltelefone = document.querySelector("#labeltelefone")
+let validtelefone = false
+
+let idade = document.querySelector('#idade')
+let labelidade = document.querySelector("#labelidade")
+let valididade = false 
+
+let nomepet = document.querySelector('#nomepet')
+let labelnomepet= document.querySelector("#labelnomepet")
+let validnomepet = false 
+
+let raça = document.querySelector('#raça')
+let labelraça= document.querySelector("#labelraça")
+let validraça = false 
+
+
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
@@ -49,6 +66,73 @@ usuario.addEventListener('keyup', () => {
   }
 })
 
+telefone.addEventListener('keyup', () => {
+  if(telefone.value.length <= 8){
+    labeltelefone.setAttribute('style', 'color: red')
+    labeltelefone.innerHTML = 'Telefone *Insira no minimo 8 caracteres'
+    telefone.setAttribute('style', 'border-color: red')
+    validtelefone = false
+  } else {
+    labeltelefone.setAttribute('style', 'color: green')
+    labeltelefone.innerHTML = 'Telefone'
+    telefone.setAttribute('style', 'border-color: green')
+    validtelefone = true
+  }
+})
+
+idade.addEventListener('keyup', () => {
+  if(idade.value.length > 2){
+    labelidade.setAttribute('style', 'color: red')
+    labelidade.innerHTML = 'Idade *Insira no minimo 2 caracteres'
+    idade.setAttribute('style', 'border-color: red')
+    valididade = false
+  } else {
+    labelidade.setAttribute('style', 'color: green')
+    labelidade.innerHTML = 'Idade'
+    idade.setAttribute('style', 'border-color: green')
+    valididade = true
+  }
+})
+
+nomepet.addEventListener('keyup', () => {
+  labelnomepet.setAttribute('style', 'color: green')
+    labelnomepet.innerHTML = 'NomePet'
+    nomepet.setAttribute('style', 'border-color: green')
+    valididade = true
+    return
+  if(nomepet.value.length < 5){
+    labelnomepet.setAttribute('style', 'color: red')
+    labelnomepet.innerHTML = 'NomePet *Insira no minimo 5 caracteres'
+    nomepet.setAttribute('style', 'border-color: red')
+    validnomepet = false
+  } else {
+    labelnomepet.setAttribute('style', 'color: green')
+    labelnomepet.innerHTML = 'Idade'
+    nomepet.setAttribute('style', 'border-color: green')
+    valididade = true
+  }
+})
+
+raça.addEventListener('keyup', () => {
+  labelraça.setAttribute('style', 'color: green')
+    labelraça.innerHTML = 'Raça'
+    nomepet.setAttribute('style', 'border-color: green')
+    validraça = true
+    return
+  if(raça.value.length < 5){
+    labelraça.setAttribute('style', 'color: red')
+    labelraça.innerHTML = 'Raça *Insira no minimo 5 caracteres'
+    raça.setAttribute('style', 'border-color: red')
+    validraça = false
+  } else {
+    labelraça.setAttribute('style', 'color: green')
+    labelraça.innerHTML = 'Idade'
+    raça.setAttribute('style', 'border-color: green')
+    validraça = true
+  }
+})
+
+
 senha.addEventListener('keyup', () => {
   if(senha.value.length <= 5){
     labelSenha.setAttribute('style', 'color: red')
@@ -77,6 +161,8 @@ confirmSenha.addEventListener('keyup', () => {
   }
 })
 
+
+
 function cadastrar(){
   if(validNome && validUsuario && validSenha && validConfirmSenha){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
@@ -85,7 +171,11 @@ function cadastrar(){
     {
       nomeCad: nome.value,
       userCad: usuario.value,
-      senhaCad: senha.value
+      senhaCad: senha.value,
+      telefoneCad: telefone.value,
+      idadeCad: idade.value,
+      nomepet: nomepet.value,
+      raça: raça.value,
     }
     )
     

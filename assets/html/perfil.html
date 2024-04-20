@@ -35,55 +35,24 @@
             </div>
             <div class="col-9">
                 <p>Nome:</p>
-                <input class="form-control" type="text">
+                <input class="form-control" id="nome-usuario" type="text" disabled>
                 <p>Telefone:</p>
-                <input class="form-control" type="text">
+                <input class="form-control" id="telefone-usuario" type="text" disabled>
                 <p>Idade:</p>
-                <input class="form-control" type="text">
+                <input class="form-control" id="idade-usuario" type="text" disabled>
             </div>
         </div>
-        <h1>Seus Pets:</h1>
+        <h1>Seu Pet:</h1>
         <div class="row">
             <div class="row mb-3 mt-3">
                 <img class="col-3" width="100%" src="https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg" alt="fotoPet1">
                 <div class="col-3">
                     <p>Nome:</p>
-                    <input class="form-control" type="text">
-                    <p>Idade:</p>
-                    <input class="form-control" type="text">
-                    <p>Raça:</p>
-                    <input class="form-control" type="text">
+                    <input class="form-control" id="nomepet-usuario" type="text" disabled>
+                    <p>Raça:</p> 
+                    <input class="form-control" id="raça-usuario" type="text" disabled>
                 </div>
-                <img class="col-3" width="100%" src="https://s2.glbimg.com/8Qm0ZoUOpOd0pmzfqKK475OrstU=/e.glbimg.com/og/ed/f/original/2015/10/28/cachorro-pets.jpg" alt="fotoPet1">
-                <div class="col-3">
-                    <p>Nome:</p>
-                    <input class="form-control" type="text">
-                    <p>Idade:</p>
-                    <input class="form-control" type="text">
-                    <p>Raça:</p>
-                    <input class="form-control" type="text">
-                </div>
-            </div>
-            <div class="row mb-3 mt-3">
-                <img class="col-3" width="100%" src="https://www.petz.com.br/blog/wp-content/uploads/2017/07/gato02.jpg" alt="fotoPet1">
-                <div class="col-3">
-                    <p>Nome:</p>
-                    <input class="form-control" type="text">
-                    <p>Idade:</p>
-                    <input class="form-control" type="text">
-                    <p>Raça:</p>
-                    <input class="form-control" type="text">
-                </div>
-                <img class="col-3" width="100%" src="https://blog.cobasi.com.br/wp-content/uploads/2020/06/cuidar-de-gato-capa.png" alt="fotoPet1">
-                <div class="col-3">
-                    <p>Nome:</p>
-                    <input class="form-control" type="text">
-                    <p>Idade:</p>
-                    <input class="form-control" type="text">
-                    <p>Raça:</p>
-                    <input class="form-control" type="text">
-                </div>
-            </div>
+                
         </div>
     </main>
     <footer class="container-fluid d-flex justify-content-around align-items-center bg-light mt-auto">
@@ -124,3 +93,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+
+$(document).ready(function() {
+    function carregadados(){
+    
+        let listaUser = []
+
+        listaUser = JSON.parse(localStorage.getItem('userLogado'))
+  
+        //*listaUser.forEach((item) => {
+        //if(usuario.value == item.userCad && senha.value == item.senhaCad){
+       
+            //userValid = {
+                //nome: item.nomeCad,
+                //user: item.userCad,
+                //senha: item.senhaCad
+            //}
+      
+        //}
+        //})
+        console.log(listaUser)
+    } 
+    const dados = JSON.parse(localStorage.getItem('userLogado'));
+    console.log('Dados armazenados:');
+    console.log(dados.nome);
+    const elNomeUsuario = document.querySelector('#nome-usuario');
+    elNomeUsuario.value = dados.nome
+    const elTelefoneUsuario = document.querySelector('#telefone-usuario');
+    elTelefoneUsuario.value = dados.telefone
+    const elIdadeUsuario = document.querySelector('#idade-usuario');
+    elIdadeUsuario.value = dados.idade
+    const elNomePetUsuario = document.querySelector('#nomepet-usuario');
+    elNomePetUsuario.value = dados.nomepet
+    const elRaçaUsuario = document.querySelector('#raça-usuario');
+    elRaçaUsuario.value = dados.raça
+
+});
+
+</script>

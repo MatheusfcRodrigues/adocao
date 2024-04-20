@@ -23,7 +23,11 @@ function entrar(){
   let userValid = {
     nome: '',
     user: '',
-    senha: ''
+    senha: '',
+    telefone: '',
+    idade: '',
+    nomepet: '',
+    raça: '',
   }
   
   listaUser = JSON.parse(localStorage.getItem('listaUser'))
@@ -34,7 +38,11 @@ function entrar(){
       userValid = {
          nome: item.nomeCad,
          user: item.userCad,
-         senha: item.senhaCad
+         senha: item.senhaCad,
+         telefone: item.telefoneCad,
+         idade: item.idadeCad,
+         nomepet: item.nomepet,
+         raça: item.raça,
        }
       
     }
