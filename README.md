@@ -1,4 +1,4 @@
-ConectPet é uma plataforma web intuitiva e fácil de usar projetada para facilitar a adoção de animais de estimação. Nosso objetivo é conectar pessoas que desejam adotar um pet com abrigos e indivíduos que estão oferecendo animais para adoção. Através de uma interface amigável e diversas funcionalidades, buscamos aumentar as chances de encontrar um lar amoroso para cada pet.
+ConnectPet é uma plataforma web intuitiva e fácil de usar projetada para facilitar a adoção de animais de estimação. Nosso objetivo é conectar pessoas que desejam adotar um pet com abrigos e indivíduos que estão oferecendo animais para adoção. Através de uma interface amigável e diversas funcionalidades, buscamos aumentar as chances de encontrar um lar amoroso para cada pet.
 
 Funcionalidades
 Cadastro de Pets: Permite que abrigos e indivíduos cadastrem animais disponíveis para adoção, incluindo fotos, descrições e informações detalhadas.
@@ -13,13 +13,14 @@ Adote Agora: Processo simplificado de adoção online com etapas claras e orient
 
 Blog e Notícias: Seção dedicada a artigos, dicas e notícias sobre cuidados com pets e histórias de adoções bem-sucedidas.
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 
 Frontend: HTML, CSS, JavaScript, React
 
-Como Contribuir
+Como Contribuir:
 
-Contribuições são bem-vindas! Se você deseja contribuir com o desenvolvimento do PetAdopt, siga os passos abaixo:
+Contribuições são bem-vindas! Se você deseja contribuir com o desenvolvimento do ConnectPet, siga os passos abaixo:
 
-Contato
+Contato:
+
 Se tiver alguma dúvida ou sugestão, entre em contato conosco através do email: conectpet.com
