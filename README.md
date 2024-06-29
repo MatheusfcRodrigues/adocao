@@ -2,22 +2,24 @@ ConectPet é uma plataforma web intuitiva e fácil de usar projetada para facili
 
 Funcionalidades
 Cadastro de Pets: Permite que abrigos e indivíduos cadastrem animais disponíveis para adoção, incluindo fotos, descrições e informações detalhadas.
+
 Busca Avançada: Ferramentas de filtragem e busca para encontrar pets de acordo com critérios específicos, como espécie, raça, idade, tamanho, e localização.
+
 Perfil do Usuário: Usuários podem criar e gerenciar seus perfis, visualizar e editar informações pessoais e acompanhar o status de suas adoções.
+
 Sistema de Mensagens: Facilita a comunicação entre adotantes e responsáveis pelos pets, permitindo perguntas e agendamento de visitas.
+
 Adote Agora: Processo simplificado de adoção online com etapas claras e orientações para ambos os lados.
+
 Blog e Notícias: Seção dedicada a artigos, dicas e notícias sobre cuidados com pets e histórias de adoções bem-sucedidas.
 
 Tecnologias Utilizadas
-Frontend: HTML, CSS, JavaScript, React
-Como Contribuir
-Contribuições são bem-vindas! Se você deseja contribuir com o desenvolvimento do PetAdopt, siga os passos abaixo:
 
-Faça um fork deste repositório.
-Crie uma nova branch (git checkout -b minha-nova-feature).
-Faça suas alterações e adicione commits (git commit -am 'Adiciona nova feature').
-Faça o push para a branch (git push origin minha-nova-feature).
-Abra um Pull Request.
+Frontend: HTML, CSS, JavaScript, React
+
+Como Contribuir
+
+Contribuições são bem-vindas! Se você deseja contribuir com o desenvolvimento do PetAdopt, siga os passos abaixo:
 
 Contato
 Se tiver alguma dúvida ou sugestão, entre em contato conosco através do email: conectpet.com
